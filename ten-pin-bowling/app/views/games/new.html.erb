@@ -1,0 +1,9 @@
+<h1>Create Games</h1>
+
+<%= form_for @game, url: games_path do |form| %>
+
+	<%= form.text_field :team, placeholder: "Team Name" %>
+
+	<%= form.button "Create Game" %>
+
+<% end %>
