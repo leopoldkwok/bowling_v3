@@ -9,6 +9,8 @@ describe Game do
 	it {should respond_to :team}
 	it {should respond_to :team_name}
 
+	it {should validate_presence_of :team }
+
 	describe ".team_name" do 
 		before do
 			@game = create(:game)

@@ -6,5 +6,7 @@ describe Player do
 	it {should belong_to :game}
 	it {should respond_to :name}
 	it {should respond_to :score}
-	
+
+	it {should validate_presence_of :name}
+
 end
