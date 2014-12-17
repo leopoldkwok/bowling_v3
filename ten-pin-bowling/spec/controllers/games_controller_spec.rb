@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 class GamesControllerTest < ActionController::TestCase
 	test "should get index" do 

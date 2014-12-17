@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'will_paginate'
 gem 'simple_form'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do 
 	gem 'better_errors'
@@ -44,6 +44,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'dotenv-rails'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'parallel_tests'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -53,14 +57,16 @@ group :development, :test do
 end
 
 group :test do
-	gem 'factory_girl_rails'
-	gem 'rspec-rails'
-	gem 'parallel_tests'
 	gem 'faker'
 	gem 'capybara'
 	gem 'capybara-extensions'
 	gem 'shoulda-matchers'
 	gem 'database_cleaner'
+	gem 'launchy'
+end
+
+group :doc do
+	gem 'sdoc', require: false
 end
 
 
