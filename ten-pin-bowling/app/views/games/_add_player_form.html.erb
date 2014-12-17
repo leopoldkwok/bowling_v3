@@ -1,0 +1,7 @@
+<%= form_for :player, url: add_player_game_path do |form| %>
+
+	<%= form.text_field :name, placeholder: "Player Name" %>
+
+	<%= form.button "Add Player" %>
+
+<% end %>

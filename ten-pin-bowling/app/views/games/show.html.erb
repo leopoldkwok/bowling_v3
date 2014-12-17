@@ -1,3 +1,16 @@
-<h1>
-	<%= "Team #{@game.team}" %>
-</h1>
+<% provide(:title, "Team #{@game.team}") %>
+
+<h2>
+	Players
+</h2>
+
+<% unless @game.started %>
+	<%= render partial: 'add_player_form' %>
+
+	<%= form_for :start_game, url: start_game_path do |form| %>
+		<%=form.button 'Start Game' %>
+	<% end %>
+
+<% end %>
+
+<%= render partial: 'player', collection: @game.players %>

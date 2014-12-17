@@ -10,6 +10,13 @@
 
 	<%= render 'layouts/links' %>
 
+	<div class ="title">
+		<h1><%= yield(:title) %></h1>
+	</div>
+
+	<% flash.each do |key, value| %>
+		<%= content_tag :div, value, class: "flash #{key}" %>
+	<% end %>
 <%= yield %>
 
 </body>
