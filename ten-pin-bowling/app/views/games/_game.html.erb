@@ -1,4 +1,4 @@
-<div class="game-link">
+<div class="game-link" id="<%= game.id %>">
 	<%= link_to "Team #{game.team}", game %>
 	<%= link_to 'Delete Game', game_path(game), method: 'delete' %>
 </div>

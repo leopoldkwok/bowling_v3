@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Bowls do 
+describe Bowl do 
 
 	it {should belong_to :frame}
 
-	it {should belong_to :score}
+	it {should respond_to :score}
 
 end
